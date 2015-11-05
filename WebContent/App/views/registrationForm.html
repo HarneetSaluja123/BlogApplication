@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link rel="stylesheet" href="CssFiles/registration.css" type="text/css">
+<script src="Scripts/angular.js"></script> -->
+<meta charset="ISO-8859-1">
+<title>RegistrationForm</title>
+</head>
+<body>
+	<!-------------------Registration form---------------------->
+	<div id="registration">
+		<h1>
+			<strong>Welcome.</strong>Please Register.
+		</h1>
+
+		<form name="registrationForm" novalidate>
+			<fieldset>
+				<label for="firstname1">FirstName</label>
+				<div
+					ng-class="{'has-error': registrationForm.firstname.$invalid  && !registrationForm.firstname.$pristine }">
+					<p>
+						<input type="text" name="firstname" id="firstname1"
+							ng-minlength="4" ng-maxlength="20" ng-model="firstname"
+							tabindex="1" autofocus required> <span
+							ng-show="registrationForm.firstname.$invalid && !registrationForm.firstname.$pristine">FirstName
+							Inavlid</span>
+					</p>
+				</div>
+				<label for="lastname1">LastName</label>
+				<div
+					ng-class="{'has-error' : registrationForm.lastname.$invalid && !registrationForm.lastname.$pristine }">
+					<p>
+						<input type="text" name="lastname" id="lastname1" ng-minlength="4"
+							ng-maxlength="20" ng-model="lastname" required> <span
+							ng-show="registrationForm.lastname.$invalid && !registrationForm.lastname.$pristine">LastName
+							Inavlid </span>
+					</p>
+				</div>
+				<label for="contactNumber1">Contact Number</label>
+				<div
+					ng-class="{'has-error' : registrationForm.phnumber.$invalid && !registrationForm.phnumber.$pristine}">
+					<p>
+						<input type="text" name="phnumber" id="contactNumber1"
+							ng-minlength="10" ng-maxlength="20" ng-pattern="/^\d{10}$/"
+							ng-model="phnumber" required> <span
+							ng-show="registrationForm.phnumber.$invalid && registrationForm.phnumber.$error.pattern">Phone
+							number should be a valid 10 digit number</span>
+					</p>
+				</div>
+				<label for="email1">Email </label>
+				<div
+					ng-class="{'has-error ' : registrationForm.email.$invalid && !registrationForm.email.$pristine }">
+					<p>
+						<input type="email" name="email" id="email1" ng-model="email"
+							ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required> <span
+							ng-show="registrationForm.email.$invalid && registration.email.$error.pattern">Enter
+							a valid Email address</span>
+					</p>
+				</div>
+				<label for="password1">Password</label>
+				<div
+					ng-class="{'has-error' : registrationForm.password.$invalid && !registrationForm.password.$pristine}">
+					<p>
+						<input type="password" id="password1" name="password"
+							ng-model="password" ng-minlength ="8" ng-maxlength = "15" 
+							ng-pattern="/.*(?=.{6,20})(?=.*\d)(?=.*[a-zA-Z]).*$/" required>
+							<span ng-show ="registrationForm.password.$invalid && registrationForm.password.$error.pattern">Invalid Password</span>
+					</p>
+				</div>
+				<p>
+					<input type="submit" name="Submit">
+				</p>
+				<h1 ><a href="#/Login">Back To Login</a></h1>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

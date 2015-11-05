@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BlogApplication</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- App CSS-->
+    <link rel="stylesheet" type="text/css" href="Css/login.css" />
+    <link rel="stylesheet" type="text/css" href="Css/registration.css" />
+</head>
+<!-- ng-app="myApp" here we bootstrap angular on this page by myApp module --> 
+<body ng-app="blogApp" id="mainApp"><!--Now it Tells to AngularJS to be active in this portion of the page. In this case the entire document.(due to we apply on body tag ) -->
+
+   
+    <section class="main-container">
+        <div class="container-fluid innerContainer css-class6" ng-class="myCssVar"> 
+			<!--<div left-nav></div> Left Menu-->
+           
+            <div class="viewContainer">
+                <div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<ng-view ng-class="myCssVar"></ng-view>
+					</div>
+                </div>   
+            </div>       
+        </div>
+    </section>
+    
+<footer>
+<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-1 text-center label1 margin-bottom10">
+emPowered by BlogAllpication.me<br>
+Copyright 2015 All rights reserved.
+</div>
+</footer>    
+    
+    
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <![endif]-->
+    <!-- add our main script file -->
+    <script type="text/javascript" src="App/Externaljs/jquery-1.11.2.js"></script> 
+    <!-- bootstrap-->
+    <script type="text/javascript" src="App/Externaljs/bootstrap/bootstrap.min.js"></script> 
+<!--     <script type="text/javascript" src="App/Externaljs/jquery.timepicker.js"></script>  -->
+    <!--Commented By Santosh A. -->
+    <!-- link angular js in page -->
+    <script type="text/javascript" src="App/Externaljs/angular/angular.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-cookies.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-sanitize.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-touch.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-idle.min.js"></script> 
+    <!-- link angular route js to do routing in page -->
+    <script type="text/javascript" src="App/Externaljs/angular/angular-route.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-ui-switch.js"></script>
+    <!-- in angular 1.3.15 it is added already in js but after this
+    version we need to add ngRoute module sepratily so
+    for version 1.3 we link below file to add ngRoute Module-->  
+    <script type="text/javascript" src="App/Externaljs/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+    <script type="text/javascript" src="App/Externaljs/bootstrap/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="App/Externaljs/bootstrap/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-strap.js"></script>
+    <script type="text/javascript" src="App/Externaljs/angular/angular-strap.tpl.js"></script> 
+    
+    
+    <!--App.js of the application  -->
+    <script type="text/javascript" src="App/app.js"></script>
+    
+    <!--Controllers  -->
+	<script type="text/javascript" src="App\Controller\loginCtrl.js"></script>
+	
+   
+</body>
+</html>
