@@ -1,4 +1,4 @@
-blogApp.controller("loginCtrl", function($scope,$location) {
+blogApp.controller("loginCtrl", function($scope,$location,$http) {
 
 	console.log("hi");
 	$scope.Login = function() {
@@ -6,6 +6,44 @@ blogApp.controller("loginCtrl", function($scope,$location) {
 		password: $scope.password;
 		console.log($scope.email);
 		console.log($scope.password);
+		
+		$http.get('JsonFiles/loginData.json').success(function(data) {
+			$scope.records = data;
+			console.log($scope.records);
+			
+			if(data.name != null && data.name == $scope.email){
+				
+				console.log("valid email Id");
+				if(data.password != null && data.password == $scope.password)
+					{
+					console.log("valid password!");
+					}
+			}else{
+				console.log("Invalid Login Details !!");
+			}
+			/*var jsonData = $scope.records;
+			for(var i=0 ; i< jsonData.length ; i++)
+				{
+				console.log("in for loop");
+					if(jsonData[i].name != null && jsonData[i].name == $scope.email){
+						if(jsonData[i].password != null && jsonData[i].password == $scope.password)
+							{
+								console.log("Valid Data");
+							}
+					}
+					else{
+						console.log("Invalid data");
+					}
+				}*/
+			/*angular.forEach($scope.records , function(value,key)
+			{
+				if(value.name == $scope.email)
+					{
+					console.log("valid email Id");
+					}
+			});*/
+			
+		});
 	}
 	
 	$scope.registerpage = function() {
