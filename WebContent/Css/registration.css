@@ -1,8 +1,8 @@
 body {
-	background-color: #f4f4f4;
+	background-color: #9D9D9D !important;
 	color: #5A5656;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.5em;
 }
 
@@ -58,6 +58,6 @@ form fieldset input[type="submit"] {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	height: 50px;
 	text-transform: uppercase;
-	width: 300px;
+	width: 280px;
 	-webkit-appearance: none;
 }

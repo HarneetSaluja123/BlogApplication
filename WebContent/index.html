@@ -13,6 +13,9 @@
     <!-- App CSS-->
     <link rel="stylesheet" type="text/css" href="Css/login.css" />
     <link rel="stylesheet" type="text/css" href="Css/registration.css" />
+    <link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <!--  <link rel="stylesheet" type="text/css" href="Css/homePage.css" /> -->
 </head>
 <!-- ng-app="myApp" here we bootstrap angular on this page by myApp module --> 
 <body ng-app="blogApp" id="mainApp"><!--Now it Tells to AngularJS to be active in this portion of the page. In this case the entire document.(due to we apply on body tag ) -->
@@ -71,6 +74,8 @@ Copyright 2015 All rights reserved.
     <script type="text/javascript" src="App/Externaljs/bootstrap/bootstrap-toggle.min.js"></script>
     <script type="text/javascript" src="App/Externaljs/angular/angular-strap.js"></script>
     <script type="text/javascript" src="App/Externaljs/angular/angular-strap.tpl.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     
     <!--App.js of the application  -->
@@ -78,7 +83,7 @@ Copyright 2015 All rights reserved.
     
     <!--Controllers  -->
 	<script type="text/javascript" src="App\Controller\loginCtrl.js"></script>
-	
-   
+	<script type="text/javascript" src="App\Controller\homeController.js"></script>
+	<script type="text/javascript" src="App\Controller\modalController.js"></script>
 </body>
 </html>

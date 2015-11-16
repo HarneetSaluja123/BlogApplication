@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" type="text/css" href="Css/homePage.css" />
+</head>
+<body ng-app="blogApp" ng-controller="modelCtrl">
+<!-- 	<div class="container">
+		<h2>Modal Example</h2> -->
+		<!-- Trigger the modal with a button -->
+		<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+			data-target="#myModal">Login</button> -->
+
+		<h1>WELCOME TO YOUR BLOGS</h1>
+		<div id="home" class="container">
+			<input class="button" class="btn btn-info btn-lg" type="submit" value="Login"  ng-click="toggleModal()">
+
+	<!-- Modal -->
+	<!-- 		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				Modal content
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Modal Header</h4>
+					</div>
+					<div class="modal-body">
+						<p>Some text in the modal.</p>
+						<div id="login">
+							<h1>
+								<strong>Welcome.</strong> Please login.
+							</h1>
+							<form name="loginForm">
+								<div
+									ng-class="{'has-error': loginForm.email.$invalid  && !loginForm.email.$pristine }">
+									<fieldset>
+										<label>UserName</label>
+										<p>
+											<input type="email" name="email" ng-model="email"
+												ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" tabindex="1"
+												autofocus required> <span class="help-inline"
+												ng-show="loginForm.email.$error.pattern">Invalid
+												Email</span>
+										</p>
+										<label>Password</label>
+										<div
+											ng-class="{'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine}">
+											<p>
+												<input type="password" name="password" ng-model="password"
+													ng-pattern="/.*(?=.{6,20})(?=.*\d)(?=.*[a-zA-Z]).*$/"
+													ng-minlength="6" ng-maxlength="15" required> <span
+													ng-show="loginForm.password.$error.pattern">Invalid
+													Password</span>
+											</p>
+										</div>
+										<p>
+											<a href="#">Forgot Password?</a>
+										</p>
+										<p>
+											<input type="submit" value="Login" ng-model="login"
+												ng-click="Login()">
+										</p>
+									</fieldset>
+								</div>
+							</form>
+							<p>
+								<span class="btn-round">or</span>
+							</p>
+							<p>
+			<a class="facebook-before"></a>
+			<button class="facebook">Login Using Facbook</button>
+		</p>
+		<p>
+			<a class="twitter-before"></a>
+			<button class="twitter">Login Using Twitter</button>
+		</p>
+		<p>
+							<a class="register-before"></a>
+							<button class="register" name="register"
+								ng-click="registerpage()">Register</button>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div> -->
+	</div>
+</body>
+</html>

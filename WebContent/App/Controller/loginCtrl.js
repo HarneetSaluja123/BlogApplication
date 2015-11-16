@@ -1,6 +1,7 @@
-blogApp.controller("loginCtrl", function($scope,$location,$http) {
+blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalStack) {
 
 	console.log("hi");
+	$modalStack.dismissAll();
 	$scope.Login = function() {
 		emailId: $scope.email;
 		password: $scope.password;
@@ -12,13 +13,14 @@ blogApp.controller("loginCtrl", function($scope,$location,$http) {
 			console.log($scope.records);
 			
 			if(data.name != null && data.name == $scope.email){
-				
 				console.log("valid email Id");
 				if(data.password != null && data.password == $scope.password)
 					{
+					$window.alert("Login Susseccful!!!!!");
 					console.log("valid password!");
 					}
 			}else{
+				$window.alert("Invalid Login Details !!");
 				console.log("Invalid Login Details !!");
 			}
 			/*var jsonData = $scope.records;
@@ -50,6 +52,7 @@ blogApp.controller("loginCtrl", function($scope,$location,$http) {
 		$scope.email="";
 		$scope.password="";
 		$location.path("/Register");
+		$modalStack.dismissAll();
 	}
 	
 	console.log("In register Controlller");

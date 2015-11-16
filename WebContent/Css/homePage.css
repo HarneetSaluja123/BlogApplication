@@ -1,0 +1,34 @@
+body {
+	line-height: 1.5em;
+	background-color: #FF7474 !important;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50px 100px;
+	
+}
+
+h1 {
+	text-align: center;
+	margin-bottom:50px;
+	font-size: 150%;
+}
+
+.button {
+	background-color: #008dde;
+	border: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: #f4f4f4;
+	cursor: pointer;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	height: 50px;
+	text-transform: uppercase;
+	width: 300px;
+	-webkit-appearance: none;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
