@@ -27,10 +27,12 @@ blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
 						{
 						$window.alert("Login Susseccful!!!!!");
 						console.log("valid password!");
+						$location.path("/Main");
 						}
 				}else{
 					$window.alert("Invalid Login Details !!");
 					console.log("Invalid Login Details !!");
+					$location.path("/Home");
 				}
 				/*var jsonData = $scope.records;
 				for(var i=0 ; i< jsonData.length ; i++)
@@ -71,6 +73,7 @@ blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
 			emailId: $scope.email;
 			password: $scope.password;
 			console.log($scope.phnumber);
+			$location.path("/Main");
 		}
 		$scope.cancel = function () {
 			$modalInstance.dismiss('cancel');

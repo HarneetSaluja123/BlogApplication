@@ -7,7 +7,6 @@ blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalSt
 		password: $scope.password;
 		console.log($scope.email);
 		console.log($scope.password);
-		$location.path("/Main");
 		
 		$http.get('JsonFiles/loginData.json').success(function(data) {
 			$scope.records = data;
@@ -19,6 +18,7 @@ blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalSt
 					{
 					$window.alert("Login Susseccful!!!!!");
 					console.log("valid password!");
+					$location.path("/Main");
 					}
 			}else{
 				$window.alert("Invalid Login Details !!");
@@ -63,6 +63,7 @@ blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalSt
 		contactNo: $scope.phnumber;
 		emailId: $scope.email;
 		password: $scope.password;
+		$location.path("/Main");
 		console.log($scope.phnumber);
 	}
 	

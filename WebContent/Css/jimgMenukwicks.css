@@ -32,27 +32,27 @@
 }
 
 .jimgMenu ul li#landscapes a {
-	background: url(../images/landscapes.jpg) repeat scroll 0%;
+	background: url(../Images/landscapes.jpg) repeat scroll 0%;
   
 }
 
 .jimgMenu ul li#people a {
-	background: url(../images/people.jpg) repeat scroll 0%;
+	background: url(../Images/people.jpg) repeat scroll 0%;
 
 }
 
 .jimgMenu ul li#nature a {
-	background: url(../images/nature.jpg) repeat scroll 0%;
+	background: url(../Images/nature.jpg) repeat scroll 0%;
   
 }
 
 .jimgMenu ul li#abstract a {
-	background: url(../images/abstract.jpg) repeat scroll 0%;
+	background: url(../Images/abstract.jpg) repeat scroll 0%;
 
 }
 
 .jimgMenu ul li#urban a {
-	background: url(../images/urban.jpg) repeat scroll 0%;
+	background: url(../Images/urban.jpg) repeat scroll 0%;
 	border-right-style: none;
 }
 
@@ -66,5 +66,5 @@
   	margin-left: 200px;
   	flaot : left;
   	text-align: left; 
-  	background: url(../images/background.jpg);
+  	background: url(../Images/background.jpg);
 }
