@@ -1,0 +1,70 @@
+.jimgMenu {
+	position:relative;
+ 	margin: 474px 0px 0px 200px; 
+ 	padding: 0px; 
+ 	width:475px; 
+ 	height:200px; 
+	overflow: hidden;
+	-webkit-transform-origin: left top;
+  	-webkit-transform:rotate(-270deg) translateX(-100%);
+}
+
+.jimgMenu ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	height: 200px;
+	position: relative;
+	}
+	
+.jimgMenu ul li {
+	width: 95px;
+	top: 0;
+}
+
+.jimgMenu ul li a {
+	text-indent: -1000px;
+	background:#fff repeat scroll 0%;
+	border-right: 2px solid #fff;
+	cursor:pointer;
+	display:block;
+	height: 200px;
+}
+
+.jimgMenu ul li#landscapes a {
+	background: url(../images/landscapes.jpg) repeat scroll 0%;
+  
+}
+
+.jimgMenu ul li#people a {
+	background: url(../images/people.jpg) repeat scroll 0%;
+
+}
+
+.jimgMenu ul li#nature a {
+	background: url(../images/nature.jpg) repeat scroll 0%;
+  
+}
+
+.jimgMenu ul li#abstract a {
+	background: url(../images/abstract.jpg) repeat scroll 0%;
+
+}
+
+.jimgMenu ul li#urban a {
+	background: url(../images/urban.jpg) repeat scroll 0%;
+	border-right-style: none;
+}
+
+.clear {
+	clear: both;
+}
+.container {
+	width: 1141px; 
+  	margin: 0 auto; 
+  	margin-top :-675px;
+  	margin-left: 200px;
+  	flaot : left;
+  	text-align: left; 
+  	background: url(../images/background.jpg);
+}

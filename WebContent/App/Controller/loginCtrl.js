@@ -7,6 +7,7 @@ blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalSt
 		password: $scope.password;
 		console.log($scope.email);
 		console.log($scope.password);
+		$location.path("/Main");
 		
 		$http.get('JsonFiles/loginData.json').success(function(data) {
 			$scope.records = data;
@@ -64,4 +65,11 @@ blogApp.controller("loginCtrl", function($scope,$location,$http,$window,$modalSt
 		password: $scope.password;
 		console.log($scope.phnumber);
 	}
+	
+    $().ready(function() {
+
+        $('.jimgMenu ul').kwicks({max: 310, duration: 300, easing: 'easeOutQuad'});
+
+    });
+
 });

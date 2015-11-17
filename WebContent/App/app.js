@@ -28,10 +28,10 @@ var blogApp = angular.module('blogApp', [
 blogApp.config(['$routeProvider', '$locationProvider','$httpProvider','$idleProvider', '$keepaliveProvider',
               function($routeProvider, $locationProvider,$httpProvider,$idleProvider, $keepaliveProvider) {
     $routeProvider
-    .when('/Test',
+    .when('/Main',
     	    {
-    	        controller: 'modelCtrl',
-    	        templateUrl: 'App/views/modalPoc.html'
+    	        controller: 'loginCtrl',
+    	        templateUrl: 'App/views/main.html'
     	    })
     
     .when('/Modal',
