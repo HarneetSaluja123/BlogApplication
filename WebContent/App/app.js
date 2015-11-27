@@ -21,6 +21,9 @@ var blogApp = angular.module('blogApp', [
     'ngSanitize',
     'ngTouch',
     'ngIdle',
+    'ngAnimate',
+    'ngCookies',
+    'ngSocial',
     'ui.bootstrap',
     'uiSwitch']); // Add dependency 'ui.bootstrap' for bootstrap support'uiSwitch'
  
@@ -28,9 +31,19 @@ var blogApp = angular.module('blogApp', [
 blogApp.config(['$routeProvider', '$locationProvider','$httpProvider','$idleProvider', '$keepaliveProvider',
               function($routeProvider, $locationProvider,$httpProvider,$idleProvider, $keepaliveProvider) {
     $routeProvider
+   /* .when('/Profile',
+    	    {
+    	        controller: 'InlineEditorController',
+    	        templateUrl: 'App/views/profile.html'
+    	    })*/
+    .when('/Profile',
+    	    {
+    	        controller: 'profileCtrl',
+    	        templateUrl: 'App/views/profile.html'
+    	    })
     .when('/Main',
     	    {
-    	        controller: 'loginCtrl',
+    	        controller: 'mainCtrl',
     	        templateUrl: 'App/views/main.html'
     	    })
     

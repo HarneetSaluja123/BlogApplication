@@ -1,4 +1,6 @@
-body {
+.body {
+	background-size: 100px 80px;
+	background-repeat: no-repeat;
 	line-height: 1.5em;
 	background-color: #FF7474 !important;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -6,13 +8,29 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 50px 100px;
-	
+	width: 100%;
+	height: 100%;
 }
 
-h1 {
+.bgImage {
 	text-align: center;
-	margin-bottom:50px;
+	background: #e0e0e0;
+	padding-bottom: 200px;
+	background-image: url('../Images/how-to-create-images.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.h1 {
+	margin-bottom: 30px;
 	font-size: 150%;
+	text-align: center;
+	margin-top: 3px !important;
+	margin-bottom: 29px !important;
+	padding-top: 97px;
+	color: orangered;
+	height: 217px;
+	line-height: 10.5em;
 }
 
 .button {
@@ -31,4 +49,5 @@ h1 {
 	margin: 0 auto;
 	display: block;
 	text-align: center;
+	margin-bottom: 50px !important;
 }

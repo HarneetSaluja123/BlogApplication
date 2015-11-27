@@ -18,8 +18,10 @@
 	<link rel="stylesheet" type="text/css" href="Css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="Css/header.css" />
 	<link rel="stylesheet" type="text/css" href="Css/jimgMenukwicks.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="Css/homePage.css" /> -->
-   <!--  <link rel="stylesheet" type="text/css" href="Css/homePage.css" /> -->
+	 <link rel="stylesheet" type="text/css" href="Css/homePage.css" /> 
+    <link rel="stylesheet" type="text/css" href="Css/modal.css" />
+   <link rel="stylesheet" type="text/css" href="Css/homePage.css" />
+    <link rel="stylesheet" type="text/css" href="Css/angular-social.css" />
 </head>
 <!-- ng-app="myApp" here we bootstrap angular on this page by myApp module --> 
 <body ng-app="blogApp" id="mainApp"><!--Now it Tells to AngularJS to be active in this portion of the page. In this case the entire document.(due to we apply on body tag ) -->
@@ -39,12 +41,12 @@
         </div>
     </section>
     
-<footer>
-<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-1 text-center label1 margin-bottom10">
+<!-- <footer>
+<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-1 text-center label1 margin-bottom 10px">
 emPowered by BlogAllpication.me<br>
 Copyright 2015 All rights reserved.
 </div>
-</footer>    
+</footer>   -->  
     
     
     <!--[if lt IE 9]>
@@ -67,6 +69,9 @@ Copyright 2015 All rights reserved.
     <script type="text/javascript" src="App/Externaljs/angular/angular-animate.js"></script>
     <script type="text/javascript" src="App/Externaljs/angular/angular-touch.js"></script>
     <script type="text/javascript" src="App/Externaljs/angular/angular-idle.min.js"></script> 
+     <script type="text/javascript" src="App/Externaljs/angular/angular-social.js"></script> 
+    <!-- <script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
     <!-- link angular route js to do routing in page -->
     <script type="text/javascript" src="App/Externaljs/angular/angular-route.js"></script>
     <script type="text/javascript" src="App/Externaljs/angular/angular-ui-switch.js"></script>
@@ -95,5 +100,12 @@ Copyright 2015 All rights reserved.
 	<script type="text/javascript" src="App\Controller\loginCtrl.js"></script>
 	<script type="text/javascript" src="App\Controller\homeController.js"></script>
 	<script type="text/javascript" src="App\Controller\modalController.js"></script>
+	<script type="text/javascript" src="App\Controller\mainController.js"></script>
+	<script type="text/javascript" src="App\Controller\profileController.js"></script>
+	<script type="text/javascript" src="App\Controller\script.js"></script>
+	<script type="text/javascript" src="App\Controller\addPostCtrl.js"></script>
+	
+	<!-- Services -->
+	<script type="text/javascript" src="App\services/BlogsCategories.js"></script>
 </body>
 </html>

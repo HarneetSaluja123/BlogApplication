@@ -1,5 +1,5 @@
-blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
-                           		function($scope,$location,$route,$modal){
+blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal','$http','$rootScope','$cookieStore',
+                           		function($scope,$location,$route,$modal,$http,$rootScope,$cookieStore){
 
 	console.log("in modal Ctrl");
 	/*var loginCtrl = function ($scope, $modalInstance) {
@@ -28,6 +28,7 @@ blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
 						$window.alert("Login Susseccful!!!!!");
 						console.log("valid password!");
 						$location.path("/Main");
+						$modalInstance.dismiss('cancel');
 						}
 				}else{
 					$window.alert("Invalid Login Details !!");
@@ -65,19 +66,34 @@ blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
 			$modalInstance.dismiss('cancel');
 		}
 		
-		console.log("In register Controlller");
-		$scope.register = function() {
-			firstName: $scope.firstname;
-			lastname: $scope.lastname;
-			contactNo: $scope.phnumber;
-			emailId: $scope.email;
-			password: $scope.password;
+		
+		$rootScope.register = function() {
+			console.log("In register Controlller");
+			firstName = $scope.firstname;
+			lastname = $scope.lastname;
+			contactNo = $scope.phnumber;
+			emailId = $scope.email;
+			password = $scope.password;
+			$scope.userInfo = {
+				contactno : $scope.phnumber,
+				email : $scope.email,
+				password: $scope.password,
+				firstname:$scope.firstname,
+				lastname:$scope.lastname,
+				/*fullName : function(){
+					var nameObj = $scope.userInfo;
+					return nameObj.firstname +" "+ nameObj.lastname;
+				}*/
+			};
+			$rootScope.user = $scope.userInfo;
 			console.log($scope.phnumber);
 			$location.path("/Main");
 		}
+		
 		$scope.cancel = function () {
 			$modalInstance.dismiss('cancel');
 		};
+		
 	};
 	
 	$scope.toggleModal = function() {
@@ -88,6 +104,25 @@ blogApp.controller('modelCtrl', ['$scope','$location','$route','$modal',
 			resolve: {}
 		});
 	};
+	
+	 $().ready(function() {
+	        $('.jimgMenu ul').kwicks({max: 310, duration: 300, easing: 'easeOutQuad'});
+	    });
+
+	    $scope.clickLandScape = function(){
+	    	console.log($rootScope.user);
+	    	$http.get('JsonFiles/LandScape.json').
+	    	success(function(data) {
+	    		      $scope.records = data;
+	    		      $scope.object = {
+	    		    		   jsonData : $scope.records
+	    		      };
+	    		      $rootScope.landScape =  $scope.object;
+	    		      $location.path("/Main");
+	    		      return $scope.records;
+			});
+	    	
+	    };
 	
 }]);
 

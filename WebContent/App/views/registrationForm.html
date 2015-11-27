@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- <link rel="stylesheet" href="CssFiles/registration.css" type="text/css">
-<script src="Scripts/angular.js"></script> -->
-<meta charset="ISO-8859-1">
-<title>RegistrationForm</title>
-</head>
-<body bgcolor="#ff8080">
-	<!-------------------Registration form---------------------->
-	<div id="registration">
-		<h1>
+	<div class="image">
+	<div id="registration" class="formBorder">
+		<h1 class="h1Register">
 			<strong>Welcome.</strong>Please Register.
 		</h1>
 
-		<form name="registrationForm" novalidate>
+		<form name="registrationForm">
 			<fieldset>
 				<label for="firstname1">FirstName</label>
 				<div
@@ -70,9 +61,8 @@
 				<p>
 					<input type="submit" name="Submit" ng-click= register()>
 				</p>
-				<h1 ><a href="#/Login">Back To Login</a></h1>
+				<h1><a href="#/Modal">Back To Login</a></h1>
 			</fieldset>
 		</form>
 	</div>
-</body>
-</html>
+	</div>

@@ -1,22 +1,22 @@
 .jimgMenu {
-	position:relative;
- 	margin: 474px 0px 0px 200px; 
- 	padding: 0px; 
- 	width:475px; 
- 	height:200px; 
+	position: relative;
+	margin: 474px 0px 0px 200px;
+	padding: 0px;
+	width: 475px;
+	height: 200px;
 	overflow: hidden;
 	-webkit-transform-origin: left top;
-  	-webkit-transform:rotate(-270deg) translateX(-100%);
+	-webkit-transform: rotate(-270deg) translateX(-100%);
 }
 
 .jimgMenu ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
-	height: 200px;
+	height: 230px;
 	position: relative;
-	}
-	
+}
+
 .jimgMenu ul li {
 	width: 95px;
 	top: 0;
@@ -24,31 +24,27 @@
 
 .jimgMenu ul li a {
 	text-indent: -1000px;
-	background:#fff repeat scroll 0%;
+	background: #fff repeat scroll 0%;
 	border-right: 2px solid #fff;
-	cursor:pointer;
-	display:block;
+	cursor: pointer;
+	display: block;
 	height: 200px;
 }
 
 .jimgMenu ul li#landscapes a {
 	background: url(../Images/landscapes.jpg) repeat scroll 0%;
-  
 }
 
 .jimgMenu ul li#people a {
 	background: url(../Images/people.jpg) repeat scroll 0%;
-
 }
 
 .jimgMenu ul li#nature a {
 	background: url(../Images/nature.jpg) repeat scroll 0%;
-  
 }
 
 .jimgMenu ul li#abstract a {
 	background: url(../Images/abstract.jpg) repeat scroll 0%;
-
 }
 
 .jimgMenu ul li#urban a {
@@ -59,12 +55,52 @@
 .clear {
 	clear: both;
 }
+
 .container {
-	width: 1141px; 
-  	margin: 0 auto; 
-  	margin-top :-675px;
-  	margin-left: 200px;
-  	flaot : left;
-  	text-align: left; 
-  	background: url(../Images/background.jpg);
+	width: 1141px;
+	margin: 0 auto;
+	margin-top: -675px;
+	margin-left: 200px;
+	flaot: left;
+	text-align: left;
+	background: url(../Images/background.jpg);
+}
+
+.footerCss {
+	margin-left: 30px;
+	background-color: white;
+	height: auto;
+	width: 600px;
+}
+
+.footerCss a {
+	margin-right: 100px;
+	margin-left: 30px;
+	font-size: 13px;
+}
+
+.loopDiv {
+	background-color: white;
+	margin-top: 18px;
+	margin-left: 30px;
+	width: 100%;
+	height: 50%;
+	font-size: 13px;
+	font-style: italic;
+}
+
+.loopSection {
+	background-color: white;
+	height: auto;
+	width: 570px;
+	margin-left: 30px;
+}
+
+#postContainer {
+	overflow: scroll;
+	margin-bottom: -12px;
+	margin-right: -126px;
+	height: 500px;
+    background-image: url(Images/writing.jpg);
+    overflow: scroll;
 }

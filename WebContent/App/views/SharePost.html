@@ -1,0 +1,19 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"
+			ng-click="cancel()">&times;</button>
+		<h3 class="modal-title">Share Application Using :</h3>
+	</div>
+	<div class="modal-body" ng-controller="addPostCtrl">
+		 <ul ng-social-buttons
+             data-url="'http://directiv.es/'"
+             data-title="current_title"
+             data-description="'{{ current_description }}'"
+             data-image="'http://s3.mistinfo.com/32/d8/32d8eab76f4c242f665bda66b5edc6c5.jpg'">
+            <li>Share:</li>
+            <li class="ng-social-facebook">Facebook</li>
+            <li class="ng-social-google-plus">Google+</li>
+            <li class="ng-social-twitter">Twitter</li>
+        </ul>
+	</div>
+</div>

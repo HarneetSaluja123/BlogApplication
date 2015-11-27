@@ -1,48 +1,61 @@
-<body style="width: 100%; height: 100%">
-	<nav>
-		<img width="160px" z-index="-1" height="70px" src="./images/mspp.png">
+<!-- <body style="width: 100%; height: 100%"> -->
+<nav>
+	<img width="160px" z-index="-1" height="70px" src="./Images/mspp.png">
 
-		<ul style="margin-left: 650px;">
-			<li class="drpdown"><a href="#"><i class="icon20 comments"></i><span>Posts</span></a>
-				<div class="dropdownContainPost">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<li>Add Post</li>
-							<li>Latest Posts</li>
-							<li>Popular Posts</li>
-						</ul>
-					</div>
-				</div></li>
-			<li class="drop"><a href="#"><i class="icon20 login"></i><span>My
-						Profile</span></a>
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<li>Settings</li>
-							<li>Switch Account</li>
-							<li>Log Out</li>
-						</ul>
-					</div>
-				</div></li>
-			<li><a href="#"> Help</a></li>
-		</ul>
-	</nav>
-	<div class="jimgMenu">
-		<ul style="height: 100%">
-			<li id="landscapes"><a href="#nogo">Landscapes</a></li>
-			<li id="people"><a href="#nogo">People</a></li>
-			<li id="nature"><a href="#nogo">Nature</a></li>
-			<li id="abstract"><a href="#nogo">Abstract</a></li>
-			<li id="urban"><a href="#nogo">Urban</a></li>
-			<li id="urban1"><a href="#nogo">Urban</a></li>
-			<li id="urban"><a href="#nogo">Urban</a></li>
-		</ul>
+	<ul style="margin-left: 650px;">
+		<li class="drpdown"><a href="#"><i class="icon20 comments"></i><span>Posts</span></a>
+			<div class="dropdownContainPost">
+				<div class="dropOut" ng-controller="addPostCtrl">
+					<div class="triangle"></div>
+					<ul>
+						<li ng-click="toggleModal()">Add Post</li>
+						<!-- <li>Latest Posts</li>
+						<li>Popular Posts</li> -->
+					</ul>
+				</div>
+			</div></li>
+		<li class="drop"><a href="#"><i class="icon20 login"></i><span>My
+					Profile</span></a>
+			<div class="dropdownContain">
+				<div class="dropOut">
+					<div class="triangle"></div>
+					<ul>
+						<li ng-click="getProfile()">Settings</li>
+						<li ng-click="getAccount()">Switch Account</li>
+						<li ng-click="logout()">Log Out</li>
+					</ul>
+				</div>
+			</div></li>
+		<li><a href="#"> Help</a></li>
+	</ul>
+</nav>
+<div class="jimgMenu" ng-controller="modelCtrl">
+	<ul style="height: 100%">
+		<li id="landscapes"><a ng-click="clickLandScape()">Landscapes</a></li>
+		<li id="people"><a>People</a></li>
+		<li id="nature"><a>Nature</a></li>
+		<li id="abstract"><a>Abstract</a></li>
+		<li id="urban"><a>Urban</a></li>
+	</ul>
+</div>
+<div class="container"
+	style="width: 1020px; height: 300px; margin-top: -660px">
+	<div id='postContainer'
+		style="height: 500px; background-image: url(Images/writing.jpg); overflow: scroll;">
+		<div ng-controller="modelCtrl" id='loopDivId'>
+			<ul ng-repeat="record in landScape.jsonData">
+				<section class="loopSection">
+					<div class="loopDiv">{{record.name}}</div>
+				</section>
+				<footer class="footerCss" ng-controller="addPostCtrl">
+					<a ng-click="toggle = !toggle">{{toggleText}}</a>
+					<a>Comment</a> <a
+						ng-click="toggleShareModal()">Share</a>
+				</footer>
+			</ul>
+		</div>
 	</div>
-	<div class="container" style="width: 1021px; height: 475px">
-		<img alt="" src="./images/writing.jpg"
-			style="width: 100%; height: 100%;">
-	</div>
+</div>
 
-</body>
+<!-- </body> -->
+<!-- <a ng-click="toggle = !toggle">{{toggle ? 'Like' : 'Unlike'}}</a> -->
